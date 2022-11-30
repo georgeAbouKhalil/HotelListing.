@@ -29,3 +29,1314 @@ FROM [Countries] AS [c]
 2022-11-29 15:05:19.170 +02:00 [INF] Executed action HotelListing.Controllers.CountryController.GetCountries (HotelListing) in 27.9519ms
 2022-11-29 15:05:19.170 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.GetCountries (HotelListing)'
 2022-11-29 15:05:19.170 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Country - - - 200 172 application/json;+charset=utf-8 38.9510ms
+2022-11-29 15:11:07.834 +02:00 [INF] Application Is Starting
+2022-11-29 15:11:08.449 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 15:11:08.648 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 15:11:08.648 +02:00 [INF] Hosting environment: Development
+2022-11-29 15:11:08.648 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 15:11:08.674 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 15:11:08.756 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 82.8095ms
+2022-11-29 15:11:08.956 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 15:11:09.038 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 82.2226ms
+2022-11-29 15:11:44.774 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/register application/json-patch+json 132
+2022-11-29 15:11:44.779 +02:00 [INF] CORS policy execution successful.
+2022-11-29 15:11:44.855 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Register (HotelListing)'
+2022-11-29 15:11:44.878 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(HotelListing.Models.UserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 15:11:45.183 +02:00 [INF] Registration Attempt for david@example.com 
+2022-11-29 15:11:45.702 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:11:46.750 +02:00 [INF] Executed DbCommand (40ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:11:46.779 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2022-11-29 15:11:46.893 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2022-11-29 15:11:46.916 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2022-11-29 15:11:46.942 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE ([a].[UserId] = @__p_0) AND ([a].[RoleId] = @__p_1)
+2022-11-29 15:11:46.947 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2022-11-29 15:11:46.957 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:11:46.959 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2022-11-29 15:11:46.970 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+2022-11-29 15:11:46.976 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-11-29 15:11:46.983 +02:00 [INF] Executing AcceptedResult, writing value of type 'null'.
+2022-11-29 15:11:46.986 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Register (HotelListing) in 2105.2687ms
+2022-11-29 15:11:46.987 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Register (HotelListing)'
+2022-11-29 15:11:46.991 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/register application/json-patch+json 132 - 202 0 - 2219.5229ms
+2022-11-29 15:13:17.458 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 51
+2022-11-29 15:13:17.461 +02:00 [INF] CORS policy execution successful.
+2022-11-29 15:13:17.470 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:13:17.474 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 15:13:17.477 +02:00 [INF] Login Attempt for david@example.com 
+2022-11-29 15:13:17.497 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:13:17.498 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:13:17.502 +02:00 [WRN] Invalid password for user.
+2022-11-29 15:13:17.503 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 15:13:17.533 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 58.5179ms
+2022-11-29 15:13:17.533 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:13:17.533 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 51 - 401 162 application/problem+json;+charset=utf-8 74.9525ms
+2022-11-29 15:14:44.031 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52
+2022-11-29 15:14:44.031 +02:00 [INF] CORS policy execution successful.
+2022-11-29 15:14:44.035 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:44.035 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 15:14:44.040 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 15:14:44.047 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:14:44.050 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:14:44.050 +02:00 [WRN] Invalid password for user.
+2022-11-29 15:14:44.050 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 15:14:44.051 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 15.7414ms
+2022-11-29 15:14:44.051 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:44.053 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52 - 401 162 application/problem+json;+charset=utf-8 22.0978ms
+2022-11-29 15:14:46.405 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52
+2022-11-29 15:14:46.405 +02:00 [INF] CORS policy execution successful.
+2022-11-29 15:14:46.405 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:46.405 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 15:14:46.405 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 15:14:46.406 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:14:46.408 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:14:46.409 +02:00 [WRN] Invalid password for user.
+2022-11-29 15:14:46.409 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 15:14:46.409 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 4.0082ms
+2022-11-29 15:14:46.409 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:46.410 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52 - 401 162 application/problem+json;+charset=utf-8 5.4891ms
+2022-11-29 15:14:47.144 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52
+2022-11-29 15:14:47.144 +02:00 [INF] CORS policy execution successful.
+2022-11-29 15:14:47.144 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:47.144 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 15:14:47.144 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 15:14:47.145 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:14:47.147 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:14:47.147 +02:00 [WRN] Invalid password for user.
+2022-11-29 15:14:47.147 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 15:14:47.148 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 3.4547ms
+2022-11-29 15:14:47.148 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:47.148 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52 - 401 162 application/problem+json;+charset=utf-8 3.8989ms
+2022-11-29 15:14:47.276 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52
+2022-11-29 15:14:47.276 +02:00 [INF] CORS policy execution successful.
+2022-11-29 15:14:47.276 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:47.276 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 15:14:47.276 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 15:14:47.277 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:14:47.279 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:14:47.279 +02:00 [WRN] Invalid password for user.
+2022-11-29 15:14:47.279 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 15:14:47.279 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.8507ms
+2022-11-29 15:14:47.279 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:47.279 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52 - 401 162 application/problem+json;+charset=utf-8 3.3022ms
+2022-11-29 15:14:47.398 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52
+2022-11-29 15:14:47.398 +02:00 [INF] CORS policy execution successful.
+2022-11-29 15:14:47.398 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:47.398 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 15:14:47.398 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 15:14:47.398 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:14:47.400 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:14:47.400 +02:00 [WRN] Invalid password for user.
+2022-11-29 15:14:47.400 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 15:14:47.401 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.847ms
+2022-11-29 15:14:47.401 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:47.401 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52 - 401 162 application/problem+json;+charset=utf-8 3.2521ms
+2022-11-29 15:14:47.518 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52
+2022-11-29 15:14:47.518 +02:00 [INF] CORS policy execution successful.
+2022-11-29 15:14:47.518 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:47.518 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 15:14:47.519 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 15:14:47.519 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:14:47.521 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:14:47.521 +02:00 [WRN] Invalid password for user.
+2022-11-29 15:14:47.521 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 15:14:47.521 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 3.0437ms
+2022-11-29 15:14:47.521 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:47.521 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52 - 401 162 application/problem+json;+charset=utf-8 3.4043ms
+2022-11-29 15:14:47.644 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52
+2022-11-29 15:14:47.644 +02:00 [INF] CORS policy execution successful.
+2022-11-29 15:14:47.644 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:47.644 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 15:14:47.645 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 15:14:47.645 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:14:47.647 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:14:47.647 +02:00 [WRN] Invalid password for user.
+2022-11-29 15:14:47.647 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 15:14:47.648 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 3.2755ms
+2022-11-29 15:14:47.648 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:47.648 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52 - 401 162 application/problem+json;+charset=utf-8 3.7084ms
+2022-11-29 15:14:47.756 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52
+2022-11-29 15:14:47.756 +02:00 [INF] CORS policy execution successful.
+2022-11-29 15:14:47.756 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:47.756 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 15:14:47.757 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 15:14:47.757 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:14:47.758 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:14:47.759 +02:00 [WRN] Invalid password for user.
+2022-11-29 15:14:47.759 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 15:14:47.759 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.4319ms
+2022-11-29 15:14:47.759 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:47.759 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52 - 401 162 application/problem+json;+charset=utf-8 2.8555ms
+2022-11-29 15:14:47.885 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52
+2022-11-29 15:14:47.885 +02:00 [INF] CORS policy execution successful.
+2022-11-29 15:14:47.885 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:47.885 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 15:14:47.885 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 15:14:47.885 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:14:47.887 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:14:47.887 +02:00 [WRN] Invalid password for user.
+2022-11-29 15:14:47.887 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 15:14:47.887 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.6534ms
+2022-11-29 15:14:47.888 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:47.888 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52 - 401 162 application/problem+json;+charset=utf-8 3.0140ms
+2022-11-29 15:14:47.997 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52
+2022-11-29 15:14:47.997 +02:00 [INF] CORS policy execution successful.
+2022-11-29 15:14:47.997 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:47.997 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 15:14:47.997 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 15:14:47.997 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:14:47.999 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:14:47.999 +02:00 [WRN] Invalid password for user.
+2022-11-29 15:14:48.000 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 15:14:48.000 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.5876ms
+2022-11-29 15:14:48.000 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:48.000 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52 - 401 162 application/problem+json;+charset=utf-8 2.9980ms
+2022-11-29 15:14:48.122 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52
+2022-11-29 15:14:48.123 +02:00 [INF] CORS policy execution successful.
+2022-11-29 15:14:48.123 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:48.123 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 15:14:48.123 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 15:14:48.123 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:14:48.125 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:14:48.126 +02:00 [WRN] Invalid password for user.
+2022-11-29 15:14:48.126 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 15:14:48.126 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 3.272ms
+2022-11-29 15:14:48.126 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:48.126 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52 - 401 162 application/problem+json;+charset=utf-8 3.7096ms
+2022-11-29 15:14:48.243 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52
+2022-11-29 15:14:48.243 +02:00 [INF] CORS policy execution successful.
+2022-11-29 15:14:48.243 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:48.243 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 15:14:48.243 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 15:14:48.244 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:14:48.246 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:14:48.246 +02:00 [WRN] Invalid password for user.
+2022-11-29 15:14:48.246 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 15:14:48.246 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.8233ms
+2022-11-29 15:14:48.246 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:14:48.249 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 52 - 401 162 application/problem+json;+charset=utf-8 3.7625ms
+2022-11-29 15:19:02.306 +02:00 [INF] Application Is Starting
+2022-11-29 15:19:02.946 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 15:19:03.138 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 15:19:03.139 +02:00 [INF] Hosting environment: Development
+2022-11-29 15:19:03.139 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 15:19:03.163 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 15:19:03.242 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 80.9249ms
+2022-11-29 15:19:03.441 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 15:19:03.536 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 94.6033ms
+2022-11-29 15:19:14.164 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Hotel - -
+2022-11-29 15:19:14.237 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2022-11-29 15:19:14.254 +02:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels() on controller HotelListing.Controllers.HotelController (HotelListing).
+2022-11-29 15:19:14.963 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:19:15.349 +02:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+2022-11-29 15:19:15.396 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-29 15:19:15.488 +02:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 1230.4024ms
+2022-11-29 15:19:15.488 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2022-11-29 15:19:15.491 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Hotel - - - 200 296 application/json;+charset=utf-8 1326.6702ms
+2022-11-29 15:19:44.663 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 48
+2022-11-29 15:19:44.670 +02:00 [INF] CORS policy execution successful.
+2022-11-29 15:19:44.676 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:19:44.691 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 15:19:44.736 +02:00 [INF] Login Attempt for user@example.com 
+2022-11-29 15:19:44.758 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 15:19:44.819 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 15:19:44.867 +02:00 [WRN] Invalid password for user.
+2022-11-29 15:19:44.868 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 15:19:44.878 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 187.7889ms
+2022-11-29 15:19:44.878 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 15:19:44.880 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 48 - 401 162 application/problem+json;+charset=utf-8 217.4013ms
+2022-11-29 15:38:21.042 +02:00 [INF] Application Is Starting
+2022-11-29 15:38:21.727 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 15:38:21.889 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 15:38:21.889 +02:00 [INF] Hosting environment: Development
+2022-11-29 15:38:21.889 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 15:38:21.912 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 15:38:21.990 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 78.6823ms
+2022-11-29 15:38:22.188 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 15:38:22.254 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - HotelListing.Controllers.HotelController.CreateHotel (HotelListing). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-11-29 15:38:22.295 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 500 - text/plain 106.3437ms
+2022-11-29 15:38:50.400 +02:00 [INF] Application Is Starting
+2022-11-29 15:38:51.035 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 15:38:51.197 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 15:38:51.197 +02:00 [INF] Hosting environment: Development
+2022-11-29 15:38:51.197 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 15:38:51.220 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 15:38:51.300 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 81.3121ms
+2022-11-29 15:38:51.502 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 15:38:51.568 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - HotelListing.Controllers.HotelController.CreateHotel (HotelListing). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-11-29 15:38:51.602 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 500 - text/plain 100.2421ms
+2022-11-29 15:42:39.549 +02:00 [INF] Application Is Starting
+2022-11-29 15:42:40.102 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 15:42:40.269 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 15:42:40.269 +02:00 [INF] Hosting environment: Development
+2022-11-29 15:42:40.269 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 15:42:40.297 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 15:42:40.376 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 81.1318ms
+2022-11-29 15:42:40.624 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 15:42:40.713 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 89.4204ms
+2022-11-29 15:46:56.989 +02:00 [INF] Application Is Starting
+2022-11-29 15:46:57.687 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 15:46:57.849 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 15:46:57.849 +02:00 [INF] Hosting environment: Development
+2022-11-29 15:46:57.849 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 15:46:57.873 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 15:46:57.950 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 78.5673ms
+2022-11-29 15:46:58.163 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 15:46:58.228 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - HotelListing.Controllers.HotelController.CreateHotel (HotelListing). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-11-29 15:46:58.279 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 500 - text/plain 116.7159ms
+2022-11-29 15:48:22.909 +02:00 [INF] Application Is Starting
+2022-11-29 15:48:23.551 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 15:48:23.715 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 15:48:23.715 +02:00 [INF] Hosting environment: Development
+2022-11-29 15:48:23.715 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 15:48:23.738 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 15:48:23.819 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 82.1890ms
+2022-11-29 15:48:24.022 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 15:48:24.082 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - HotelListing.Controllers.HotelController.CreateHotel (HotelListing). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-11-29 15:48:24.118 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 500 - text/plain 96.2266ms
+2022-11-29 15:51:46.538 +02:00 [INF] Application Is Starting
+2022-11-29 15:51:47.144 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 15:51:47.313 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 15:51:47.313 +02:00 [INF] Hosting environment: Development
+2022-11-29 15:51:47.313 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 15:51:47.336 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 15:51:47.415 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 79.8164ms
+2022-11-29 15:51:47.609 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 15:51:47.686 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 76.1988ms
+2022-11-29 16:35:08.547 +02:00 [INF] Application Is Starting
+2022-11-29 16:35:09.266 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 16:35:09.433 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 16:35:09.434 +02:00 [INF] Hosting environment: Development
+2022-11-29 16:35:09.434 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 16:35:09.460 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 16:35:09.545 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 86.0894ms
+2022-11-29 16:35:09.755 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 16:35:09.831 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 76.1172ms
+2022-11-29 16:45:30.398 +02:00 [INF] Application Is Starting
+2022-11-29 16:45:31.253 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 16:45:31.426 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 16:45:31.426 +02:00 [INF] Hosting environment: Development
+2022-11-29 16:45:31.426 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 16:45:31.450 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 16:45:31.531 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 82.4841ms
+2022-11-29 16:45:31.787 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 16:45:31.908 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 120.2929ms
+2022-11-29 16:45:59.778 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Hotel - -
+2022-11-29 16:45:59.784 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:45:59.785 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Hotel - - - 204 - - 6.7670ms
+2022-11-29 16:45:59.787 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Hotel - -
+2022-11-29 16:45:59.789 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:45:59.863 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2022-11-29 16:45:59.881 +02:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels() on controller HotelListing.Controllers.HotelController (HotelListing).
+2022-11-29 16:46:00.585 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:46:01.632 +02:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+2022-11-29 16:46:01.680 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-29 16:46:01.770 +02:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 1886.0043ms
+2022-11-29 16:46:01.771 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2022-11-29 16:46:01.775 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Hotel - - - 200 296 application/json;+charset=utf-8 1987.7813ms
+2022-11-29 16:46:14.311 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Hotel/2 - -
+2022-11-29 16:46:14.312 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:46:14.312 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Hotel/2 - - - 204 - - 0.4274ms
+2022-11-29 16:46:14.313 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Hotel/2 - -
+2022-11-29 16:46:14.313 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:46:14.315 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotel (HotelListing)'
+2022-11-29 16:46:14.327 +02:00 [INF] Route matched with {action = "GetHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotel(Int32) on controller HotelListing.Controllers.HotelController (HotelListing).
+2022-11-29 16:46:14.361 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:46:14.457 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating], [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Hotels] AS [h]
+INNER JOIN [Countries] AS [c] ON [h].[CountryId] = [c].[Id]
+WHERE [h].[Id] = @__id_0
+2022-11-29 16:46:14.464 +02:00 [INF] Executing OkObjectResult, writing value of type 'HotelListing.Models.HotelDTO'.
+2022-11-29 16:46:14.466 +02:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotel (HotelListing) in 138.4849ms
+2022-11-29 16:46:14.466 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotel (HotelListing)'
+2022-11-29 16:46:14.466 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Hotel/2 - - - 200 154 application/json;+charset=utf-8 153.7822ms
+2022-11-29 16:46:31.606 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Hotel/1 - -
+2022-11-29 16:46:31.606 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:46:31.606 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Hotel/1 - - - 204 - - 0.2554ms
+2022-11-29 16:46:31.607 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Hotel/1 - -
+2022-11-29 16:46:31.607 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:46:31.609 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotel (HotelListing)'
+2022-11-29 16:46:31.609 +02:00 [INF] Route matched with {action = "GetHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotel(Int32) on controller HotelListing.Controllers.HotelController (HotelListing).
+2022-11-29 16:46:31.615 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:46:31.618 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating], [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Hotels] AS [h]
+INNER JOIN [Countries] AS [c] ON [h].[CountryId] = [c].[Id]
+WHERE [h].[Id] = @__id_0
+2022-11-29 16:46:31.619 +02:00 [INF] Executing OkObjectResult, writing value of type 'HotelListing.Models.HotelDTO'.
+2022-11-29 16:46:31.619 +02:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotel (HotelListing) in 10.2614ms
+2022-11-29 16:46:31.619 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotel (HotelListing)'
+2022-11-29 16:46:31.619 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Hotel/1 - - - 200 151 application/json;+charset=utf-8 11.7348ms
+2022-11-29 16:48:17.564 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Hotel/2 - -
+2022-11-29 16:48:17.564 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:48:17.564 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Hotel/2 - - - 204 - - 0.8138ms
+2022-11-29 16:48:17.566 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Hotel/2 - -
+2022-11-29 16:48:17.566 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:48:17.566 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotel (HotelListing)'
+2022-11-29 16:48:17.566 +02:00 [INF] Route matched with {action = "GetHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotel(Int32) on controller HotelListing.Controllers.HotelController (HotelListing).
+2022-11-29 16:48:17.568 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:48:17.572 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating], [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Hotels] AS [h]
+INNER JOIN [Countries] AS [c] ON [h].[CountryId] = [c].[Id]
+WHERE [h].[Id] = @__id_0
+2022-11-29 16:48:17.573 +02:00 [INF] Executing OkObjectResult, writing value of type 'HotelListing.Models.HotelDTO'.
+2022-11-29 16:48:17.573 +02:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotel (HotelListing) in 6.5135ms
+2022-11-29 16:48:17.573 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotel (HotelListing)'
+2022-11-29 16:48:17.573 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Hotel/2 - - - 200 154 application/json;+charset=utf-8 6.9921ms
+2022-11-29 16:48:18.989 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Hotel/ - -
+2022-11-29 16:48:18.989 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:48:18.989 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Hotel/ - - - 204 - - 0.3503ms
+2022-11-29 16:48:18.990 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Hotel/ - -
+2022-11-29 16:48:18.990 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:48:18.991 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2022-11-29 16:48:18.991 +02:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels() on controller HotelListing.Controllers.HotelController (HotelListing).
+2022-11-29 16:48:18.991 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:48:18.993 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+2022-11-29 16:48:18.997 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-29 16:48:18.997 +02:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 6.547ms
+2022-11-29 16:48:18.997 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2022-11-29 16:48:18.997 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Hotel/ - - - 200 296 application/json;+charset=utf-8 6.9838ms
+2022-11-29 16:48:47.254 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Account/login - -
+2022-11-29 16:48:47.254 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:48:47.254 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Account/login - - - 204 - - 0.7471ms
+2022-11-29 16:48:47.256 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 60
+2022-11-29 16:48:47.256 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:48:47.257 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:48:47.263 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:48:47.302 +02:00 [INF] Login Attempt for user@example.com 
+2022-11-29 16:48:47.306 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:48:47.317 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:48:47.364 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:48:47.364 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:48:47.373 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 110.3764ms
+2022-11-29 16:48:47.374 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:48:47.375 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 60 - 401 162 application/problem+json;+charset=utf-8 119.2085ms
+2022-11-29 16:49:39.512 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Account/login - -
+2022-11-29 16:49:39.512 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:49:39.513 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Account/login - - - 204 - - 0.7177ms
+2022-11-29 16:49:39.515 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 64
+2022-11-29 16:49:39.515 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:49:39.516 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:39.516 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:49:39.522 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 16:49:39.523 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:49:39.526 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:49:39.526 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:49:39.527 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:49:39.527 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 11.1641ms
+2022-11-29 16:49:39.527 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:39.527 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 64 - 401 162 application/problem+json;+charset=utf-8 12.3779ms
+2022-11-29 16:49:41.179 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 64
+2022-11-29 16:49:41.179 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:49:41.179 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:41.179 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:49:41.182 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 16:49:41.182 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:49:41.185 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:49:41.185 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:49:41.185 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:49:41.185 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 6.4456ms
+2022-11-29 16:49:41.185 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:41.185 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 64 - 401 162 application/problem+json;+charset=utf-8 6.8077ms
+2022-11-29 16:49:41.849 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 64
+2022-11-29 16:49:41.849 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:49:41.849 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:41.849 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:49:41.850 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 16:49:41.850 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:49:41.852 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:49:41.852 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:49:41.852 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:49:41.852 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.6437ms
+2022-11-29 16:49:41.852 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:41.852 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 64 - 401 162 application/problem+json;+charset=utf-8 3.0161ms
+2022-11-29 16:49:42.397 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 64
+2022-11-29 16:49:42.397 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:49:42.398 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:42.398 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:49:42.398 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 16:49:42.398 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:49:42.399 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:49:42.400 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:49:42.400 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:49:42.400 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.3573ms
+2022-11-29 16:49:42.400 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:42.400 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 64 - 401 162 application/problem+json;+charset=utf-8 2.7072ms
+2022-11-29 16:49:42.821 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 64
+2022-11-29 16:49:42.821 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:49:42.821 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:42.821 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:49:42.822 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 16:49:42.822 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:49:42.823 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:49:42.823 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:49:42.824 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:49:42.824 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.273ms
+2022-11-29 16:49:42.824 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:42.824 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 64 - 401 162 application/problem+json;+charset=utf-8 2.8783ms
+2022-11-29 16:49:43.287 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 64
+2022-11-29 16:49:43.287 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:49:43.287 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:43.287 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:49:43.287 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 16:49:43.287 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:49:43.288 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:49:43.289 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:49:43.289 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:49:43.289 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.2913ms
+2022-11-29 16:49:43.289 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:43.289 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 64 - 401 162 application/problem+json;+charset=utf-8 2.6444ms
+2022-11-29 16:49:43.603 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 64
+2022-11-29 16:49:43.603 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:49:43.603 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:43.603 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:49:43.603 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 16:49:43.604 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:49:43.605 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:49:43.605 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:49:43.606 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:49:43.606 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.5618ms
+2022-11-29 16:49:43.606 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:43.606 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 64 - 401 162 application/problem+json;+charset=utf-8 3.4782ms
+2022-11-29 16:49:44.000 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 64
+2022-11-29 16:49:44.000 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:49:44.000 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:44.000 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:49:44.000 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 16:49:44.000 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:49:44.001 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:49:44.002 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:49:44.002 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:49:44.002 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.2475ms
+2022-11-29 16:49:44.002 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:44.002 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 64 - 401 162 application/problem+json;+charset=utf-8 2.5804ms
+2022-11-29 16:49:54.339 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Account/login - -
+2022-11-29 16:49:54.339 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:49:54.339 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Account/login - - - 204 - - 0.3091ms
+2022-11-29 16:49:54.340 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 63
+2022-11-29 16:49:54.340 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:49:54.340 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:54.340 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:49:54.340 +02:00 [INF] Login Attempt for david@example.com 
+2022-11-29 16:49:54.341 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:49:54.341 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:49:54.342 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:49:54.342 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:49:54.342 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 1.9424ms
+2022-11-29 16:49:54.342 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:54.342 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 63 - 401 162 application/problem+json;+charset=utf-8 2.2303ms
+2022-11-29 16:49:55.131 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 63
+2022-11-29 16:49:55.131 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:49:55.131 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:55.131 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:49:55.132 +02:00 [INF] Login Attempt for david@example.com 
+2022-11-29 16:49:55.132 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:49:55.134 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:49:55.134 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:49:55.134 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:49:55.134 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.751ms
+2022-11-29 16:49:55.134 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:55.134 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 63 - 401 162 application/problem+json;+charset=utf-8 3.1338ms
+2022-11-29 16:49:59.154 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 64
+2022-11-29 16:49:59.155 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:49:59.155 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:59.155 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:49:59.155 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 16:49:59.155 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:49:59.157 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:49:59.157 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:49:59.157 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:49:59.157 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.4784ms
+2022-11-29 16:49:59.157 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:49:59.157 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 64 - 401 162 application/problem+json;+charset=utf-8 2.9143ms
+2022-11-29 16:50:00.062 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Account/login - -
+2022-11-29 16:50:00.062 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:50:00.062 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Account/login - - - 204 - - 0.1828ms
+2022-11-29 16:50:00.063 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 64
+2022-11-29 16:50:00.063 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:50:00.063 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:50:00.063 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:50:00.064 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 16:50:00.064 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:50:00.067 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:50:00.067 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:50:00.067 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:50:00.067 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 4.0241ms
+2022-11-29 16:50:00.068 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:50:00.068 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 64 - 401 162 application/problem+json;+charset=utf-8 4.3708ms
+2022-11-29 16:50:00.799 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 64
+2022-11-29 16:50:00.799 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:50:00.800 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:50:00.800 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:50:00.800 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 16:50:00.800 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:50:00.801 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:50:00.802 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:50:00.802 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:50:00.802 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.1577ms
+2022-11-29 16:50:00.802 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:50:00.802 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 64 - 401 162 application/problem+json;+charset=utf-8 2.5670ms
+2022-11-29 16:50:01.424 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 64
+2022-11-29 16:50:01.424 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:50:01.424 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:50:01.424 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:50:01.425 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 16:50:01.425 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:50:01.426 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:50:01.427 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:50:01.427 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:50:01.427 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.5008ms
+2022-11-29 16:50:01.427 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:50:01.427 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 64 - 401 162 application/problem+json;+charset=utf-8 2.8866ms
+2022-11-29 16:54:22.172 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Account/login - -
+2022-11-29 16:54:22.173 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:54:22.175 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Account/login - - - 204 - - 2.2622ms
+2022-11-29 16:54:22.178 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 64
+2022-11-29 16:54:22.178 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:54:22.178 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:54:22.178 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:54:22.179 +02:00 [INF] Login Attempt for TREV@EXAMPLE.COM 
+2022-11-29 16:54:22.179 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:54:22.180 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:54:22.208 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:54:22.208 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:54:22.208 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 29.6774ms
+2022-11-29 16:54:22.208 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:54:22.208 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 64 - 401 162 application/problem+json;+charset=utf-8 30.0463ms
+2022-11-29 16:54:29.783 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Account/login - -
+2022-11-29 16:54:29.784 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:54:29.784 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Account/login - - - 204 - - 0.2777ms
+2022-11-29 16:54:29.785 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 64
+2022-11-29 16:54:29.785 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:54:29.785 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:54:29.785 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:54:29.785 +02:00 [INF] Login Attempt for TREV@EXAMPLE.COM 
+2022-11-29 16:54:29.785 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:54:29.786 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:54:29.787 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:54:29.787 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:54:29.787 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.0241ms
+2022-11-29 16:54:29.787 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:54:29.787 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 64 - 401 162 application/problem+json;+charset=utf-8 2.4127ms
+2022-11-29 16:54:40.182 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Account/login - -
+2022-11-29 16:54:40.182 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:54:40.182 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Account/login - - - 204 - - 0.2565ms
+2022-11-29 16:54:40.183 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 64
+2022-11-29 16:54:40.183 +02:00 [INF] CORS policy execution successful.
+2022-11-29 16:54:40.183 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:54:40.183 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 16:54:40.183 +02:00 [INF] Login Attempt for trev@example.com 
+2022-11-29 16:54:40.184 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 16:54:40.184 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 16:54:40.185 +02:00 [WRN] Invalid password for user.
+2022-11-29 16:54:40.185 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 16:54:40.186 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.5011ms
+2022-11-29 16:54:40.186 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 16:54:40.186 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 64 - 401 162 application/problem+json;+charset=utf-8 2.7965ms
+2022-11-29 18:19:24.380 +02:00 [INF] Application Is Starting
+2022-11-29 18:19:25.067 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 18:19:25.357 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 18:19:25.357 +02:00 [INF] Hosting environment: Development
+2022-11-29 18:19:25.357 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 18:19:25.393 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 18:19:25.497 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 106.2526ms
+2022-11-29 18:19:25.838 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 18:19:25.968 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 129.8847ms
+2022-11-29 18:20:53.856 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/register application/json-patch+json 134
+2022-11-29 18:20:53.861 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:20:53.955 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Register (HotelListing)'
+2022-11-29 18:20:53.980 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(HotelListing.Models.UserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:20:54.326 +02:00 [INF] Registration Attempt for david@example.com 
+2022-11-29 18:20:54.876 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:20:55.371 +02:00 [INF] Executed DbCommand (36ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:20:55.452 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2022-11-29 18:20:55.454 +02:00 [WRN] User validation failed: DuplicateUserName;DuplicateEmail.
+2022-11-29 18:20:55.460 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2022-11-29 18:20:55.490 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Register (HotelListing) in 1506.7534ms
+2022-11-29 18:20:55.491 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Register (HotelListing)'
+2022-11-29 18:20:55.495 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/register application/json-patch+json 134 - 400 137 application/json;+charset=utf-8 1638.3823ms
+2022-11-29 18:21:22.273 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 51
+2022-11-29 18:21:22.274 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:21:22.279 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:21:22.288 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:21:22.291 +02:00 [INF] Login Attempt for david@example.com 
+2022-11-29 18:21:22.309 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:21:22.312 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:21:22.317 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:21:22.318 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:21:22.327 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 38.4788ms
+2022-11-29 18:21:22.327 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:21:22.327 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 51 - 401 162 application/problem+json;+charset=utf-8 54.1139ms
+2022-11-29 18:21:40.887 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Account/login - -
+2022-11-29 18:21:40.887 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:21:40.888 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Account/login - - - 204 - - 1.1352ms
+2022-11-29 18:21:40.889 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 63
+2022-11-29 18:21:40.889 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:21:40.895 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:21:40.895 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:21:40.900 +02:00 [INF] Login Attempt for david@example.com 
+2022-11-29 18:21:40.905 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:21:40.907 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:21:40.908 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:21:40.908 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:21:40.908 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 13.475ms
+2022-11-29 18:21:40.908 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:21:40.908 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 63 - 401 162 application/problem+json;+charset=utf-8 19.4441ms
+2022-11-29 18:21:50.511 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Account/login - -
+2022-11-29 18:21:50.511 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:21:50.511 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Account/login - - - 204 - - 0.2119ms
+2022-11-29 18:21:50.512 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json 63
+2022-11-29 18:21:50.512 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:21:50.512 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:21:50.512 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:21:50.513 +02:00 [INF] Login Attempt for david@example.com 
+2022-11-29 18:21:50.513 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:21:50.514 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:21:50.515 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:21:50.515 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:21:50.516 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 3.1338ms
+2022-11-29 18:21:50.516 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:21:50.516 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json 63 - 401 162 application/problem+json;+charset=utf-8 3.5105ms
+2022-11-29 18:37:26.251 +02:00 [INF] Application Is Starting
+2022-11-29 18:37:26.867 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 18:37:27.106 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 18:37:27.106 +02:00 [INF] Hosting environment: Development
+2022-11-29 18:37:27.106 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 18:37:27.130 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 18:37:27.217 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 87.6652ms
+2022-11-29 18:37:27.437 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 18:37:27.567 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 130.6908ms
+2022-11-29 18:37:36.503 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 48
+2022-11-29 18:37:36.508 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:37:36.580 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:37:36.604 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:37:36.890 +02:00 [INF] Login Attempt for user@example.com 
+2022-11-29 18:37:37.380 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:37:38.351 +02:00 [INF] Executed DbCommand (40ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:37:38.416 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:37:38.421 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:37:38.455 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 1848.001ms
+2022-11-29 18:37:38.455 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:37:38.459 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 48 - 401 162 application/problem+json;+charset=utf-8 1955.3451ms
+2022-11-29 18:38:40.693 +02:00 [INF] Application Is Starting
+2022-11-29 18:38:41.322 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 18:38:41.485 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 18:38:41.485 +02:00 [INF] Hosting environment: Development
+2022-11-29 18:38:41.485 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 18:38:41.508 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 18:38:41.585 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 78.3068ms
+2022-11-29 18:38:41.782 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 18:38:41.865 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 83.2892ms
+2022-11-29 18:38:47.090 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 48
+2022-11-29 18:38:47.094 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:38:47.169 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:38:47.195 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:38:47.498 +02:00 [INF] Login Attempt for user@example.com 
+2022-11-29 18:38:48.001 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:38:48.468 +02:00 [INF] Executed DbCommand (39ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:38:48.533 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:38:48.538 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:38:48.572 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 1373.4505ms
+2022-11-29 18:38:48.572 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:38:48.576 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 48 - 401 162 application/problem+json;+charset=utf-8 1486.4143ms
+2022-11-29 18:40:38.428 +02:00 [INF] Application Is Starting
+2022-11-29 18:40:39.088 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 18:40:39.245 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 18:40:39.245 +02:00 [INF] Hosting environment: Development
+2022-11-29 18:40:39.245 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 18:40:39.268 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 18:40:39.373 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 106.4683ms
+2022-11-29 18:40:39.623 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 18:40:39.709 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 86.3031ms
+2022-11-29 18:40:46.310 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 48
+2022-11-29 18:40:46.314 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:40:46.390 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:40:46.413 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:40:46.703 +02:00 [INF] Login Attempt for user@example.com 
+2022-11-29 18:40:47.224 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:40:47.672 +02:00 [INF] Executed DbCommand (41ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:40:47.737 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:40:47.742 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:40:47.775 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 1359.6856ms
+2022-11-29 18:40:47.776 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:40:47.779 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 48 - 401 162 application/problem+json;+charset=utf-8 1469.2350ms
+2022-11-29 18:41:37.473 +02:00 [INF] Application Is Starting
+2022-11-29 18:41:38.115 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 18:41:38.275 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 18:41:38.275 +02:00 [INF] Hosting environment: Development
+2022-11-29 18:41:38.275 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 18:41:38.301 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 18:41:38.381 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 81.0892ms
+2022-11-29 18:41:38.592 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 18:41:38.700 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 107.7811ms
+2022-11-29 18:41:42.032 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 48
+2022-11-29 18:41:42.036 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:41:42.110 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:41:42.133 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:41:42.439 +02:00 [INF] Login Attempt for user@example.com 
+2022-11-29 18:41:42.956 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:41:43.393 +02:00 [INF] Executed DbCommand (41ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:41:43.459 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:41:43.459 +02:00 [INF] test test 
+2022-11-29 18:41:43.464 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:41:43.499 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 1362.2494ms
+2022-11-29 18:41:43.499 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:41:43.503 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 48 - 401 162 application/problem+json;+charset=utf-8 1471.5526ms
+2022-11-29 18:48:17.023 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/register application/json-patch+json 140
+2022-11-29 18:48:17.024 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:48:17.030 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Register (HotelListing)'
+2022-11-29 18:48:17.034 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(HotelListing.Models.UserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:48:17.047 +02:00 [INF] Registration Attempt for george@example.com 
+2022-11-29 18:48:17.084 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:48:17.167 +02:00 [INF] Executed DbCommand (42ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:48:17.180 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2022-11-29 18:48:17.255 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2022-11-29 18:48:17.277 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2022-11-29 18:48:17.297 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE ([a].[UserId] = @__p_0) AND ([a].[RoleId] = @__p_1)
+2022-11-29 18:48:17.300 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2022-11-29 18:48:17.309 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:48:17.311 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2022-11-29 18:48:17.321 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+2022-11-29 18:48:17.326 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-11-29 18:48:17.329 +02:00 [INF] Executing AcceptedResult, writing value of type 'null'.
+2022-11-29 18:48:17.329 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Register (HotelListing) in 294.9876ms
+2022-11-29 18:48:17.329 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Register (HotelListing)'
+2022-11-29 18:48:17.329 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/register application/json-patch+json 140 - 202 0 - 306.6325ms
+2022-11-29 18:49:36.273 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:49:36.273 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:49:36.277 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:36.277 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:49:36.282 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:49:36.289 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:49:36.292 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:49:36.292 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:49:36.292 +02:00 [INF] test test 
+2022-11-29 18:49:36.292 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:49:36.293 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 15.4832ms
+2022-11-29 18:49:36.293 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:36.293 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 401 162 application/problem+json;+charset=utf-8 19.6986ms
+2022-11-29 18:49:37.241 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:49:37.241 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:49:37.241 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:37.241 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:49:37.241 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:49:37.241 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:49:37.244 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:49:37.244 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:49:37.244 +02:00 [INF] test test 
+2022-11-29 18:49:37.244 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:49:37.244 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 3.4321ms
+2022-11-29 18:49:37.245 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:37.245 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 401 162 application/problem+json;+charset=utf-8 4.5721ms
+2022-11-29 18:49:39.216 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:49:39.216 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:49:39.217 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:39.219 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:49:39.219 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:49:39.219 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:49:39.221 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:49:39.221 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:49:39.221 +02:00 [INF] test test 
+2022-11-29 18:49:39.221 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:49:39.221 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.6902ms
+2022-11-29 18:49:39.221 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:39.222 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 401 162 application/problem+json;+charset=utf-8 5.9631ms
+2022-11-29 18:49:39.533 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:49:39.533 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:49:39.533 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:39.533 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:49:39.533 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:49:39.534 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:49:39.536 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:49:39.536 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:49:39.536 +02:00 [INF] test test 
+2022-11-29 18:49:39.536 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:49:39.536 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 3.3329ms
+2022-11-29 18:49:39.537 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:39.539 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 401 162 application/problem+json;+charset=utf-8 6.4912ms
+2022-11-29 18:49:39.720 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:49:39.720 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:49:39.720 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:39.721 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:49:39.721 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:49:39.721 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:49:39.723 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:49:39.723 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:49:39.724 +02:00 [INF] test test 
+2022-11-29 18:49:39.724 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:49:39.724 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 3.3475ms
+2022-11-29 18:49:39.724 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:39.724 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 401 162 application/problem+json;+charset=utf-8 3.6836ms
+2022-11-29 18:49:39.842 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:49:39.842 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:49:39.842 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:39.842 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:49:39.843 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:49:39.843 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:49:39.844 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:49:39.844 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:49:39.844 +02:00 [INF] test test 
+2022-11-29 18:49:39.845 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:49:39.845 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.2715ms
+2022-11-29 18:49:39.845 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:39.845 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 401 162 application/problem+json;+charset=utf-8 2.6877ms
+2022-11-29 18:49:40.068 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:49:40.068 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:49:40.068 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.068 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:49:40.068 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:49:40.068 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:49:40.071 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:49:40.071 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:49:40.071 +02:00 [INF] test test 
+2022-11-29 18:49:40.071 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:49:40.072 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 3.6849ms
+2022-11-29 18:49:40.072 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.072 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 401 162 application/problem+json;+charset=utf-8 4.0616ms
+2022-11-29 18:49:40.259 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:49:40.259 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:49:40.260 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.260 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:49:40.260 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:49:40.260 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:49:40.263 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:49:40.263 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:49:40.263 +02:00 [INF] test test 
+2022-11-29 18:49:40.263 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:49:40.263 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 3.8383ms
+2022-11-29 18:49:40.263 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.264 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 401 162 application/problem+json;+charset=utf-8 4.2311ms
+2022-11-29 18:49:40.404 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:49:40.404 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:49:40.404 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.404 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:49:40.405 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:49:40.405 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:49:40.407 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:49:40.407 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:49:40.407 +02:00 [INF] test test 
+2022-11-29 18:49:40.407 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:49:40.407 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.7209ms
+2022-11-29 18:49:40.407 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.407 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 401 162 application/problem+json;+charset=utf-8 3.0714ms
+2022-11-29 18:49:40.525 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:49:40.525 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:49:40.525 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.525 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:49:40.525 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:49:40.525 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:49:40.527 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:49:40.527 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:49:40.527 +02:00 [INF] test test 
+2022-11-29 18:49:40.527 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:49:40.528 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.6111ms
+2022-11-29 18:49:40.528 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.528 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 401 162 application/problem+json;+charset=utf-8 2.9710ms
+2022-11-29 18:49:40.642 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:49:40.642 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:49:40.642 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.642 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:49:40.643 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:49:40.643 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:49:40.644 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:49:40.645 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:49:40.645 +02:00 [INF] test test 
+2022-11-29 18:49:40.645 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:49:40.645 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.6673ms
+2022-11-29 18:49:40.645 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.645 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 401 162 application/problem+json;+charset=utf-8 2.9941ms
+2022-11-29 18:49:40.747 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:49:40.747 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:49:40.747 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.747 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:49:40.747 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:49:40.747 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:49:40.749 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:49:40.749 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:49:40.749 +02:00 [INF] test test 
+2022-11-29 18:49:40.749 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:49:40.749 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.2458ms
+2022-11-29 18:49:40.749 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.749 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 401 162 application/problem+json;+charset=utf-8 2.6069ms
+2022-11-29 18:49:40.861 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:49:40.861 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:49:40.861 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.861 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:49:40.861 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:49:40.861 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:49:40.863 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:49:40.864 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:49:40.864 +02:00 [INF] test test 
+2022-11-29 18:49:40.864 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:49:40.864 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.642ms
+2022-11-29 18:49:40.864 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.864 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 401 162 application/problem+json;+charset=utf-8 3.0032ms
+2022-11-29 18:49:40.985 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:49:40.985 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:49:40.986 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.986 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:49:40.986 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:49:40.986 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:49:40.987 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:49:40.988 +02:00 [WRN] Invalid password for user.
+2022-11-29 18:49:40.988 +02:00 [INF] test test 
+2022-11-29 18:49:40.988 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:49:40.988 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 2.4411ms
+2022-11-29 18:49:40.988 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:49:40.988 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 401 162 application/problem+json;+charset=utf-8 2.8333ms
+2022-11-29 18:54:51.107 +02:00 [INF] Application Is Starting
+2022-11-29 18:54:51.713 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 18:54:51.900 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 18:54:51.900 +02:00 [INF] Hosting environment: Development
+2022-11-29 18:54:51.900 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 18:54:51.923 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 18:54:51.999 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 76.4961ms
+2022-11-29 18:54:52.211 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 18:54:52.299 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 87.6909ms
+2022-11-29 18:55:09.395 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:55:09.398 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:55:09.468 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:55:09.491 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:55:09.797 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:55:10.288 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:55:10.685 +02:00 [INF] Executed DbCommand (34ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:55:10.845 +02:00 [ERR] Something Went Wrong in the Login
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPassword(TUser user, String hashedPassword, String providedPassword)
+   at Microsoft.AspNetCore.Identity.UserManager`1.VerifyPasswordAsync(IUserPasswordStore`1 store, TUser user, String password)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CheckPasswordAsync(TUser user, String password)
+   at HotelListing.Services.AuthManager.ValidateUser(LoginUserDTO userDTO) in C:\Users\georg\source\repos\HotelListing\HotelListing\Services\AuthManager.cs:line 81
+   at HotelListing.Controllers.AccountController.Login(LoginUserDTO userDTO) in C:\Users\georg\source\repos\HotelListing\HotelListing\Controllers\AccountController.cs:line 85
+2022-11-29 18:55:10.899 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:55:10.933 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 1437.9869ms
+2022-11-29 18:55:10.933 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:55:10.937 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 500 245 application/problem+json;+charset=utf-8 1542.2148ms
+2022-11-29 18:56:04.713 +02:00 [INF] Application Is Starting
+2022-11-29 18:56:05.334 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 18:56:05.532 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 18:56:05.532 +02:00 [INF] Hosting environment: Development
+2022-11-29 18:56:05.532 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 18:56:05.555 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 18:56:05.632 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 77.4085ms
+2022-11-29 18:56:05.832 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 18:56:05.921 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 89.4081ms
+2022-11-29 18:56:20.205 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53
+2022-11-29 18:56:20.210 +02:00 [INF] CORS policy execution successful.
+2022-11-29 18:56:20.283 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:56:20.306 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 18:56:20.618 +02:00 [INF] Login Attempt for george@example.com 
+2022-11-29 18:56:21.114 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 18:56:21.508 +02:00 [INF] Executed DbCommand (33ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 18:56:21.639 +02:00 [ERR] Something Went Wrong in the Login
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPassword(TUser user, String hashedPassword, String providedPassword)
+   at Microsoft.AspNetCore.Identity.UserManager`1.VerifyPasswordAsync(IUserPasswordStore`1 store, TUser user, String password)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CheckPasswordAsync(TUser user, String password)
+   at HotelListing.Services.AuthManager.ValidateUser(LoginUserDTO userDTO) in C:\Users\georg\source\repos\HotelListing\HotelListing\Services\AuthManager.cs:line 81
+   at HotelListing.Controllers.AccountController.Login(LoginUserDTO userDTO) in C:\Users\georg\source\repos\HotelListing\HotelListing\Controllers\AccountController.cs:line 85
+2022-11-29 18:56:21.672 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 18:56:21.706 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 1396.798ms
+2022-11-29 18:56:21.707 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 18:56:21.711 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 53 - 500 245 application/problem+json;+charset=utf-8 1505.5806ms
+2022-11-29 18:56:45.698 +02:00 [INF] Application Is Starting
+2022-11-29 18:56:46.370 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 18:56:46.562 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 18:56:46.562 +02:00 [INF] Hosting environment: Development
+2022-11-29 18:56:46.562 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 18:56:46.586 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 18:56:46.668 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 83.5928ms
+2022-11-29 18:56:46.873 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 18:56:46.994 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 120.7583ms
+2022-11-29 19:03:31.650 +02:00 [INF] Application Is Starting
+2022-11-29 19:03:32.375 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-29 19:03:32.585 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-29 19:03:32.585 +02:00 [INF] Hosting environment: Development
+2022-11-29 19:03:32.585 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-29 19:03:32.609 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-29 19:03:32.693 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 85.2765ms
+2022-11-29 19:03:32.907 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-29 19:03:32.993 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 86.0090ms
+2022-11-29 19:03:37.458 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 48
+2022-11-29 19:03:37.462 +02:00 [INF] CORS policy execution successful.
+2022-11-29 19:03:37.537 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 19:03:37.562 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HotelListing.Models.LoginUserDTO) on controller HotelListing.Controllers.AccountController (HotelListing).
+2022-11-29 19:03:37.879 +02:00 [INF] Login Attempt for user@example.com 
+2022-11-29 19:03:38.371 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-29 19:03:38.812 +02:00 [INF] Executed DbCommand (39ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-11-29 19:03:38.879 +02:00 [WRN] Invalid password for user.
+2022-11-29 19:03:38.879 +02:00 [INF] test test 
+2022-11-29 19:03:38.885 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-11-29 19:03:38.918 +02:00 [INF] Executed action HotelListing.Controllers.AccountController.Login (HotelListing) in 1352.8312ms
+2022-11-29 19:03:38.919 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.AccountController.Login (HotelListing)'
+2022-11-29 19:03:38.923 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Account/login application/json-patch+json 48 - 401 162 application/problem+json;+charset=utf-8 1464.4446ms
