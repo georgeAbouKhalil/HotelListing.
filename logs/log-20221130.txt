@@ -1,0 +1,193 @@
+2022-11-30 11:56:01.186 +02:00 [INF] Application Is Starting
+2022-11-30 11:56:01.852 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-30 11:56:02.090 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-30 11:56:02.090 +02:00 [INF] Hosting environment: Development
+2022-11-30 11:56:02.090 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-30 11:56:02.120 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-30 11:56:02.205 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 86.0402ms
+2022-11-30 11:56:02.447 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-30 11:56:02.536 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 88.9964ms
+2022-11-30 11:59:13.095 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Country/?pagesize=15&pagenumber=5 - -
+2022-11-30 11:59:13.126 +02:00 [INF] CORS policy execution successful.
+2022-11-30 11:59:13.127 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Country/?pagesize=15&pagenumber=5 - - - 204 - - 32.5095ms
+2022-11-30 11:59:13.128 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Country/?pagesize=15&pagenumber=5 - -
+2022-11-30 11:59:13.129 +02:00 [INF] CORS policy execution successful.
+2022-11-30 11:59:13.222 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.GetCountries (HotelListing)'
+2022-11-30 11:59:13.248 +02:00 [INF] Route matched with {action = "GetCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2022-11-30 11:59:14.000 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-30 11:59:15.083 +02:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Countries] AS [c]
+2022-11-30 11:59:15.110 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2022-11-30 11:59:15.111 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2022-11-30 11:59:15.143 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-11-30 11:59:15.165 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.CountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-30 11:59:15.290 +02:00 [INF] Executed action HotelListing.Controllers.CountryController.GetCountries (HotelListing) in 2038.9429ms
+2022-11-30 11:59:15.291 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.GetCountries (HotelListing)'
+2022-11-30 11:59:15.294 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Country/?pagesize=15&pagenumber=5 - - - 200 2 application/json;+charset=utf-8 2165.3731ms
+2022-11-30 11:59:42.783 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Country/?pagesize=3&pagenumber=1 - -
+2022-11-30 11:59:42.785 +02:00 [INF] CORS policy execution successful.
+2022-11-30 11:59:42.785 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Country/?pagesize=3&pagenumber=1 - - - 204 - - 2.7710ms
+2022-11-30 11:59:42.787 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Country/?pagesize=3&pagenumber=1 - -
+2022-11-30 11:59:42.787 +02:00 [INF] CORS policy execution successful.
+2022-11-30 11:59:42.792 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.GetCountries (HotelListing)'
+2022-11-30 11:59:42.793 +02:00 [INF] Route matched with {action = "GetCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2022-11-30 11:59:42.845 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-30 11:59:42.846 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Countries] AS [c]
+2022-11-30 11:59:42.848 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-11-30 11:59:42.853 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.CountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-30 11:59:42.868 +02:00 [INF] Executed action HotelListing.Controllers.CountryController.GetCountries (HotelListing) in 75.4261ms
+2022-11-30 11:59:42.868 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.GetCountries (HotelListing)'
+2022-11-30 11:59:42.869 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Country/?pagesize=3&pagenumber=1 - - - 200 172 application/json;+charset=utf-8 81.7124ms
+2022-11-30 11:59:53.566 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Country/?pagesize=2&pagenumber=1 - -
+2022-11-30 11:59:53.566 +02:00 [INF] CORS policy execution successful.
+2022-11-30 11:59:53.567 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Country/?pagesize=2&pagenumber=1 - - - 204 - - 0.4521ms
+2022-11-30 11:59:53.568 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Country/?pagesize=2&pagenumber=1 - -
+2022-11-30 11:59:53.568 +02:00 [INF] CORS policy execution successful.
+2022-11-30 11:59:53.573 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.GetCountries (HotelListing)'
+2022-11-30 11:59:53.573 +02:00 [INF] Route matched with {action = "GetCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2022-11-30 11:59:53.579 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-30 11:59:53.580 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Countries] AS [c]
+2022-11-30 11:59:53.582 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-11-30 11:59:53.582 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.CountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-30 11:59:53.582 +02:00 [INF] Executed action HotelListing.Controllers.CountryController.GetCountries (HotelListing) in 8.7542ms
+2022-11-30 11:59:53.582 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.GetCountries (HotelListing)'
+2022-11-30 11:59:53.582 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Country/?pagesize=2&pagenumber=1 - - - 200 111 application/json;+charset=utf-8 14.6067ms
+2022-11-30 12:00:02.817 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Country/?pagesize=1&pagenumber=10 - -
+2022-11-30 12:00:02.817 +02:00 [INF] CORS policy execution successful.
+2022-11-30 12:00:02.817 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Country/?pagesize=1&pagenumber=10 - - - 204 - - 0.2870ms
+2022-11-30 12:00:02.818 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Country/?pagesize=1&pagenumber=10 - -
+2022-11-30 12:00:02.818 +02:00 [INF] CORS policy execution successful.
+2022-11-30 12:00:02.818 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.GetCountries (HotelListing)'
+2022-11-30 12:00:02.818 +02:00 [INF] Route matched with {action = "GetCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2022-11-30 12:00:02.818 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-30 12:00:02.819 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Countries] AS [c]
+2022-11-30 12:00:02.820 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-11-30 12:00:02.821 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.CountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-30 12:00:02.821 +02:00 [INF] Executed action HotelListing.Controllers.CountryController.GetCountries (HotelListing) in 2.6635ms
+2022-11-30 12:00:02.821 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.GetCountries (HotelListing)'
+2022-11-30 12:00:02.821 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Country/?pagesize=1&pagenumber=10 - - - 200 2 application/json;+charset=utf-8 3.0777ms
+2022-11-30 13:08:40.351 +02:00 [INF] Application Is Starting
+2022-11-30 13:08:41.130 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-30 13:08:41.305 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-30 13:08:41.305 +02:00 [INF] Hosting environment: Development
+2022-11-30 13:08:41.305 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-30 13:08:41.329 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-30 13:08:41.405 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 76.8731ms
+2022-11-30 13:08:41.663 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-30 13:08:41.751 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 87.9991ms
+2022-11-30 13:09:19.988 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Country - -
+2022-11-30 13:09:19.994 +02:00 [INF] CORS policy execution successful.
+2022-11-30 13:09:19.995 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Country - - - 204 - - 6.6381ms
+2022-11-30 13:09:19.996 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Country - -
+2022-11-30 13:09:19.999 +02:00 [INF] CORS policy execution successful.
+2022-11-30 13:09:20.068 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.GetCountries (HotelListing)'
+2022-11-30 13:09:20.096 +02:00 [INF] Route matched with {action = "GetCountries", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries(HotelListing.Models.RequestParams) on controller HotelListing.Controllers.CountryController (HotelListing).
+2022-11-30 13:09:20.770 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-30 13:09:21.663 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Countries] AS [c]
+2022-11-30 13:09:21.689 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2022-11-30 13:09:21.689 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2022-11-30 13:09:21.719 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-11-30 13:09:21.745 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.CountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-30 13:09:21.834 +02:00 [INF] Executed action HotelListing.Controllers.CountryController.GetCountries (HotelListing) in 1734.6789ms
+2022-11-30 13:09:21.834 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.GetCountries (HotelListing)'
+2022-11-30 13:09:21.838 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Country - - - 200 172 application/json;+charset=utf-8 1841.4376ms
+2022-11-30 13:09:27.507 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Country/1 - -
+2022-11-30 13:09:27.507 +02:00 [INF] CORS policy execution successful.
+2022-11-30 13:09:27.507 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Country/1 - - - 204 - - 0.4042ms
+2022-11-30 13:09:27.508 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Country/1 - -
+2022-11-30 13:09:27.508 +02:00 [INF] CORS policy execution successful.
+2022-11-30 13:09:27.510 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.GetCountry (HotelListing)'
+2022-11-30 13:09:27.512 +02:00 [INF] Route matched with {action = "GetCountry", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountry(Int32) on controller HotelListing.Controllers.CountryController (HotelListing).
+2022-11-30 13:09:27.538 +02:00 [INF] Entity Framework Core 5.0.1 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-11-30 13:09:27.643 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[ShortName], [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM (
+    SELECT TOP(1) [c].[Id], [c].[Name], [c].[ShortName]
+    FROM [Countries] AS [c]
+    WHERE [c].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Hotels] AS [h] ON [t].[Id] = [h].[CountryId]
+ORDER BY [t].[Id], [h].[Id]
+2022-11-30 13:09:27.665 +02:00 [INF] Executing OkObjectResult, writing value of type 'HotelListing.Models.CountryDTO'.
+2022-11-30 13:09:27.668 +02:00 [INF] Executed action HotelListing.Controllers.CountryController.GetCountry (HotelListing) in 155.7362ms
+2022-11-30 13:09:27.668 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.GetCountry (HotelListing)'
+2022-11-30 13:09:27.668 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Country/1 - - - 200 140 application/json;+charset=utf-8 160.1364ms
+2022-11-30 13:10:15.612 +02:00 [INF] Application Is Starting
+2022-11-30 13:10:16.346 +02:00 [INF] User profile is available. Using 'C:\Users\georg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-30 13:10:16.614 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-30 13:10:16.614 +02:00 [INF] Hosting environment: Development
+2022-11-30 13:10:16.614 +02:00 [INF] Content root path: C:\Users\georg\source\repos\HotelListing\HotelListing
+2022-11-30 13:10:16.638 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-11-30 13:10:16.713 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 76.1071ms
+2022-11-30 13:10:16.913 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-11-30 13:10:16.995 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 81.5416ms
+2022-11-30 13:10:48.617 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44379/api/Country/1 - -
+2022-11-30 13:10:48.622 +02:00 [INF] CORS policy execution successful.
+2022-11-30 13:10:48.623 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44379/api/Country/1 - - - 204 - - 6.6542ms
+2022-11-30 13:10:48.625 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Country/1 - -
+2022-11-30 13:10:48.627 +02:00 [INF] CORS policy execution successful.
+2022-11-30 13:10:48.698 +02:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.GetCountry (HotelListing)'
+2022-11-30 13:10:48.721 +02:00 [INF] Route matched with {action = "GetCountry", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountry(Int32) on controller HotelListing.Controllers.CountryController (HotelListing).
+2022-11-30 13:10:48.998 +02:00 [INF] Executed action HotelListing.Controllers.CountryController.GetCountry (HotelListing) in 273.8113ms
+2022-11-30 13:10:49.000 +02:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.GetCountry (HotelListing)'
+2022-11-30 13:10:49.001 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Exception of type 'System.Exception' was thrown.
+   at HotelListing.Controllers.CountryController.GetCountry(Int32 id) in C:\Users\georg\source\repos\HotelListing\HotelListing\Controllers\CountryController.cs:line 55
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2022-11-30 13:10:49.069 +02:00 [ERR] Someting Went Wrong in the System.Exception: Exception of type 'System.Exception' was thrown.
+   at HotelListing.Controllers.CountryController.GetCountry(Int32 id) in C:\Users\georg\source\repos\HotelListing\HotelListing\Controllers\CountryController.cs:line 55
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2022-11-30 13:10:49.146 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Country/1 - - - 500 - application/json 520.6162ms
